@@ -1,7 +1,7 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      {{ if isset .Site.Params "gravatarHash" }}
+      {{ if isset .Site.Params "gravatarhash" }}
         <img src="https://www.gravatar.com/avatar/{{ .Site.Params.gravatarHash }}?s=200"
              alt="gravatar" title="{{ .Site.Author.name }}">
       {{ end }}
@@ -18,14 +18,23 @@
 
     <ul class="sidebar-nav">
       <li class="sidebar-nav-item">
+      {{ with .Site.Params.twitter }}<a href="{{ . }}"><i class="fa fa-twitter-square fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.facebook }}<a href="{{ . }}"><i class="fa fa-facebook-square fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.googleplus }}<a href="{{ . }}"><i class="fa fa-google-plus-square fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.lastfm }}<a href="{{ . }}"><i class="fa fa-lastfm-square fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.flickr }}<a href="{{ . }}"><i class="fa fa-flickr fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.instagram }}<a href="{{ . }}"><i class="fa fa-instagram fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.youtube }}<a href="{{ . }}"><i class="fa fa-youtube-square fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.linkedin }}<a href="{{ . }}"><i class="fa fa-linkedin-square fa-3x"></i></a>{{ end }}
       {{ with .Site.Params.github }}<a href="{{ . }}"><i class="fa fa-github-square fa-3x"></i></a>{{ end }}
       {{ with .Site.Params.bitbucket }}<a href="{{ . }}"><i class="fa fa-bitbucket-square fa-3x"></i></a>{{ end }}
       {{ with .Site.Params.stackOverflow }}<a href="{{ . }}"><i class="fa fa-stack-overflow fa-3x"></i></a>{{ end }}
-      {{ with .Site.Params.linkedin }}<a href="{{ . }}"><i class="fa fa-linkedin-square fa-3x"></i></a>{{ end }}
-      {{ with .Site.Params.googleplus }}<a href="{{ . }}"><i class="fa fa-google-plus-square fa-3x"></i></a>{{ end }}
-      {{ with .Site.Params.facebook }}<a href="{{ . }}"><i class="fa fa-facebook-square fa-3x"></i></a>{{ end }}
-      {{ with .Site.Params.twitter }}<a href="{{ . }}"><i class="fa fa-twitter-square fa-3x"></i></a>{{ end }}
-      {{ with .Site.Params.youtube }}<a href="{{ . }}"><i class="fa fa-youtube-square fa-3x"></i></a>{{ end }}
+<!--
+      {{ with .Site.Params.spotify }}<a href="{{ . }}"><i class="fa fa-spotify fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.applemusic }}<a href="{{ . }}"><i class="fa fa-music fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.bandcamp }}<a href="{{ . }}"><i class="fa fa-bandcamp fa-3x"></i></a>{{ end }}
+      {{ with .Site.Params.fivehundredpx }}<a href="{{ . }}"><i class="fa fa-500px fa-3x"></i></a>{{ end }}
+-->
       {{ if .Site.Params.rss }}<a href="{{ "/index.xml" | absURL }}" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>{{ end }}
       </li>
     </ul>
@@ -45,7 +54,7 @@
     </script></p>
     {{ end }}
 
-    <p>Copyright &copy; {{ .Now.Format "2006" }} <a href="{{ "/license/" | absURL }}">License</a><br/>
+    <p>Copyright &copy; {{ dateFormat "2006" .Date.UTC }} <a href="{{ "/license/" | absURL }}">License</a><br/>
        Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
   </div>
 </div>
