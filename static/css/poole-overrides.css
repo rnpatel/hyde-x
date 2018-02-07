@@ -5,3 +5,26 @@
 pre {
   padding: 0
 }
+
+/* Body */
+body {
+  color: #ccc;
+  background-color: #181818;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #ddd;
+}
+
+/* Links */
+a {
+  color: #2484BC;
+}
+
+/* Titles */
+.page-title,
+.post-title,
+.post-title a {
+  color: #eee;
+}
