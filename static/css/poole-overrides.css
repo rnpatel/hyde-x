@@ -3,32 +3,32 @@
  */
 
 pre {
-  padding: 0
+    padding: 0
 }
 
 /* Body */
 body {
-  color: #9A9A9A;
-  background-color: #16171A;
+    color: #9A9A9A;
+    background-color: #16171A;
 }
 
 strong {
-  color: #eee;
+    color: #eee;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: #ddd;
+    color: #ddd;
 }
 
 /* Links */
 a {
-  color: #6FB9E4;
+    color: #6FB9E4;
 }
 
 /* Titles */
 .page-title,
 .post-title,
 .post-title a {
-  color: #eee;
+    color: #eee;
 }
